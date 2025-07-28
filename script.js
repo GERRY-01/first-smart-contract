@@ -36,7 +36,8 @@ const contractABI = [
 ]
 
 async function submitMove() {
-    const userMove = document.getElementById('userMove').value;
+    let userMove = document.getElementById('userMove').value;
+    userMove = userMove.charAt(0).toUpperCase() + userMove.slice(1).toLowerCase();
     const result = document.getElementById('result-text');
 
     if (!userMove) {
